@@ -1,0 +1,30 @@
+{
+  "name": "money-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "18.16.0",
+    "npm": "9.6.2"
+  },
+  "scripts": {
+    "client-install":"npm install --prefix frontend",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix frontend",
+    "dev" : "concurrently \"npm run server\" \"npm run frontend\"",
+    "start": "nodemon server",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "moment": "^2.29.4",
+    "mongoose": "^7.3.1",
+    "nodemon": "^2.0.22",
+    "validator": "^13.9.0"
+  }
+}
